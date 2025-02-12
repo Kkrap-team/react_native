@@ -1,0 +1,27 @@
+# ninja log v5
+1	17	0	C:/Users/ghks8/react/krab/android/app/.cxx/Debug/1e4n5pn2/armeabi-v7a/CMakeFiles/cmake.verify_globs	5501ab80f9ccc1af
+28	2401	7588962040804745	CMakeFiles/appmodules.dir/C_/Users/ghks8/react/krab/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	ed760439d9b7c1b
+26	2644	7588962043224241	CMakeFiles/appmodules.dir/OnLoad.cpp.o	dc7a501466ade8ca
+23	342	7588963799316059	build.ninja	3400b9ce52b1b9ca
+7	1813	7588962034939599	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/EventEmitters.cpp.o	99d74c8617648106
+2644	2756	7588962044379294	C:/Users/ghks8/react/krab/android/app/build/intermediates/cxx/Debug/1e4n5pn2/obj/armeabi-v7a/libappmodules.so	1bdd75377d5e3050
+10	2229	7588962039085183	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ShadowNodes.cpp.o	e548dfe924ae86e6
+0	7	0	clean	30d27373806b6939
+13	1683	7588962033650129	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o	94f30f9bbe050e34
+15	2296	7588962039733049	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/rnasyncstorageJSI-generated.cpp.o	f3d7cca0dd2cdf51
+18	2308	7588962039884430	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp.o	b733d26b6ec1f948
+23	2380	7588962040629398	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o	883edbe67dcce6af
+20	2411	7588962040909941	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o	638068a94d5ed7ad
+1	16	0	C:/Users/ghks8/react/krab/android/app/.cxx/Debug/1e4n5pn2/armeabi-v7a/CMakeFiles/cmake.verify_globs	5501ab80f9ccc1af
+27	2107	7588963821492280	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o	94f30f9bbe050e34
+12	2204	7588963822464742	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/EventEmitters.cpp.o	99d74c8617648106
+25	2483	7588963825271714	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ShadowNodes.cpp.o	e548dfe924ae86e6
+17	2596	7588963826390876	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp.o	b733d26b6ec1f948
+20	2639	7588963826811750	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/rnasyncstorageJSI-generated.cpp.o	f3d7cca0dd2cdf51
+14	2688	7588963827320574	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o	883edbe67dcce6af
+22	2733	7588963827753150	rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o	638068a94d5ed7ad
+8	2758	7588963828023528	CMakeFiles/appmodules.dir/C_/Users/ghks8/react/krab/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	ed760439d9b7c1b
+10	2964	7588963830049695	CMakeFiles/appmodules.dir/OnLoad.cpp.o	dc7a501466ade8ca
+2964	3037	7588963830820750	C:/Users/ghks8/react/krab/android/app/build/intermediates/cxx/Debug/1e4n5pn2/obj/armeabi-v7a/libappmodules.so	1bdd75377d5e3050
+1	16	0	C:/Users/ghks8/react/krab/android/app/.cxx/Debug/1e4n5pn2/armeabi-v7a/CMakeFiles/cmake.verify_globs	5501ab80f9ccc1af
+1	15	0	C:/Users/ghks8/react/krab/android/app/.cxx/Debug/1e4n5pn2/armeabi-v7a/CMakeFiles/cmake.verify_globs	5501ab80f9ccc1af
