@@ -54,6 +54,7 @@ const TutorialView: React.FC<TutorialViewProps> = ({ onComplete, navigation }) =
     };
 
     const goLogin = () => {
+        // TODO: 릴리즈 버전에서 onComplete 사용
         // onComplete();
         navigation.replace('Login');
     };
@@ -152,7 +153,7 @@ const styles = StyleSheet.create({
     inactiveDot: {
         backgroundColor: '#B3B3B3',
     },
-    textHidden: {
+    textHidden: { // display: none 사용시 해당 텍스트가 렌더링이 안돼 다시 보이는 경우 레이아웃이 깨짐
         opacity: 0,
         pointerEvents: 'none',
     },
