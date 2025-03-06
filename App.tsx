@@ -5,9 +5,9 @@ import { TutorialModel } from './src/models/TutorialModel';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeView from './src/views/HomeView';
 import TutorialView from './src/views/TutorialView';
+import LoginView from './src/views/LoginView';
 
-const TutorialStack = createStackNavigator();
-const MainStack = createStackNavigator();
+const Stack = createStackNavigator();
 
 const App: React.FC = () => {
   const [isFirstLaunch, setIsFirstLaunch] = useState(false);
@@ -33,24 +33,15 @@ const App: React.FC = () => {
 
   return (
     <NavigationContainer>
-      {!isFirstLaunch ? (
-        <TutorialStack.Navigator>
-          <TutorialStack.Screen
-            name="Tutorial"
-            options={{ headerShown: false }}>
-            {(props) => <TutorialView {...props} onComplete={completeTutorial} />}
-          </TutorialStack.Screen>
-
-        </TutorialStack.Navigator>
-      ) : (
-        <MainStack.Navigator>
-          <MainStack.Screen
-            name="Home"
-            component={HomeView}
-            options={{ headerShown: false }}
-          />
-        </MainStack.Navigator>
-      )}
+      <Stack.Navigator initialRouteName={isFirstLaunch ? 'Home' : 'Tutorial'}>
+        <Stack.Screen
+          name="Tutorial"
+          options={{ headerShown: false }}>
+          {(props) => <TutorialView {...props} onComplete={completeTutorial} />}
+        </Stack.Screen>
+        <Stack.Screen name="Home" component={HomeView} options={{ headerShown: false }} />
+        <Stack.Screen name="Login" component={LoginView} options={{ headerShown: false }} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

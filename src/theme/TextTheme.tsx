@@ -56,6 +56,31 @@ const styles = StyleSheet.create({
         color: '#5AB7FC',
         lineHeight: 32,
     },
+    noto30_000000: {
+        fontSize: 30,
+        fontFamily: 'NotoSansKR-Regular',
+        color: '#000000',
+        lineHeight: 35,
+    },
+    noto30_000000_Bold: {
+        fontSize: 30,
+        fontFamily: 'NotoSansKR-Bold',
+        color: '#000000',
+        lineHeight: 35,
+
+    },
+    noto30_5AB7FC: {
+        fontSize: 30,
+        fontFamily: 'NotoSansKR-Regular',
+        color: '#5AB7FC',
+        lineHeight: 35,
+    },
+    noto30_5AB7FC_Bold: {
+        fontSize: 30,
+        fontFamily: 'NotoSansKR-Bold',
+        color: '#5AB7FC',
+        lineHeight: 35,
+    },
 });
 
 export default styles;
