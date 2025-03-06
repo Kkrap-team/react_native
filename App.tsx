@@ -37,23 +37,7 @@ const App: React.FC = () => {
         <TutorialStack.Navigator>
           <TutorialStack.Screen
             name="Tutorial"
-            options={{
-              headerTitle: '사용방법',
-              headerStyle: {
-                backgroundColor: '#ffffff',
-                elevation: 0,
-                shadowOpacity: 0,
-              },
-              headerTitleStyle: {
-                color: '#000000',
-                fontWeight: 'bold',
-                fontSize: 20,
-                textAlign: 'center',
-                fontFamily: 'NotoSansKR-Bold',
-              },
-              headerTitleAlign: 'center',
-            }}
-          >
+            options={{ headerShown: false }}>
             {(props) => <TutorialView {...props} onComplete={completeTutorial} />}
           </TutorialStack.Screen>
 
