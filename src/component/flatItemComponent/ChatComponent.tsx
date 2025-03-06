@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, FlatList, Dimensions, StyleSheet, Image } from 'react-native';
+import React from 'react';
+import { View, Text, Dimensions, StyleSheet, Image } from 'react-native';
 import textTheme from '../../theme/TextTheme';
 
 var width = Dimensions.get('window').width; //full width
