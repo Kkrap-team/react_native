@@ -1,41 +1,74 @@
 // views/TutorialView.tsx
-import React, { useState } from 'react';
-import { View, FlatList, Dimensions, StyleSheet, Button, Image, Text } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { View, FlatList, StyleSheet, Image, Text } from 'react-native';
 import FlatItemComponent from '../component/FlatItemComponent';
-import CustomButton from '../component/CustomButton';
 import textTheme from '../theme/TextTheme';
 
 interface TutorialViewProps {
     onComplete: () => void;
+    navigation: any;
 }
 
-const { width } = Dimensions.get('window');
 
 const tutorialData = [
-    { id: '1', title: 'Welcome to App', description: 'This is tutorial page 1' },
-    { id: '2', title: 'Features', description: 'This is tutorial page 2' },
-    { id: '3', title: 'Get Started', description: 'This is tutorial page 3' },
-    { id: '4', title: 'Enjoy!', description: 'This is tutorial page 4' },
+    { id: '0', title: 'Welcome to App', description: 'This is tutorial page 1' },
+    { id: '1', title: 'Features', description: 'This is tutorial page 2' },
+    { id: '2', title: 'Get Started', description: 'This is tutorial page 3' },
+    { id: '3', title: 'Enjoy!', description: 'This is tutorial page 4' },
 ];
 
-const TutorialView: React.FC<TutorialViewProps> = ({ onComplete }) => {
+const TutorialView: React.FC<TutorialViewProps> = ({ onComplete, navigation }) => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const onViewableItemsChanged = React.useRef(({ viewableItems }) => {
+    const flatListRef = useRef<FlatList>(null);
+
+    const onViewableItemsChanged = useRef(({ viewableItems }: { viewableItems: Array<{ index: number }> }) => {
         if (viewableItems.length > 0) {
             setCurrentIndex(viewableItems[0].index);
         }
     }).current;
 
+    const goToPage = (index: number) => {
+        if (flatListRef.current) {
+            flatListRef.current.scrollToIndex({ index, animated: true });
+        }
+    };
+
+    const onNext = () => {
+        if (currentIndex < tutorialData.length - 1) {
+            const newIndex = currentIndex + 1;
+            setCurrentIndex(newIndex);
+            goToPage(newIndex);
+        } else {
+            goLogin();
+        }
+    };
+
+    const onPrev = () => {
+        if (currentIndex > 0) {
+            const newIndex = currentIndex - 1;
+            setCurrentIndex(newIndex);
+            goToPage(newIndex);
+        }
+    };
+
+    const goLogin = () => {
+        // onComplete();
+        navigation.replace('Login');
+    };
+
     return (
         <View style={styles.container}>
             <View style={styles.topContainer}>
                 <Image source={require('../../assets/image/logo.png')} />
-                <Text style={textTheme.noto14_b3b3b3_Bold}>건너뛰기</Text>
+                <Text
+                    onPress={goLogin}
+                    style={textTheme.noto14_b3b3b3_Bold}>건너뛰기</Text>
             </View>
             <View style={styles.pageContainer}>
                 <FlatList
+                    ref={flatListRef}
                     data={tutorialData}
                     style={styles.list}
                     horizontal
@@ -50,9 +83,11 @@ const TutorialView: React.FC<TutorialViewProps> = ({ onComplete }) => {
                 />
             </View>
             <View style={styles.dotContainer}>
-                <Text style={currentIndex === 0 ?
-                    [textTheme.noto16_b3b3b3_Bold, styles.textHidden] : textTheme.noto16_b3b3b3_Bold
-                }>이전으로</Text>
+                <Text
+                    onPress={onPrev}
+                    style={currentIndex === 0 ?
+                        [textTheme.noto16_b3b3b3_Bold, styles.textHidden] : textTheme.noto16_b3b3b3_Bold
+                    }>이전으로</Text>
                 <View style={styles.pagination}>
                     {tutorialData.map((_, index) => (
                         <View
@@ -64,7 +99,9 @@ const TutorialView: React.FC<TutorialViewProps> = ({ onComplete }) => {
                         />
                     ))}
                 </View>
-                <Text style={textTheme.noto16_000000_Bold}>다음으로</Text>
+                <Text
+                    onPress={onNext}
+                    style={textTheme.noto16_000000_Bold}>다음으로</Text>
             </View>
         </View>
     );
@@ -79,6 +116,7 @@ const styles = StyleSheet.create({
     topContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'center',
         marginHorizontal: 16,
     },
     pageContainer: {

@@ -11,19 +11,19 @@ interface FlatItemComponentProps {
 
 const FlatItemComponent: React.FC<FlatItemComponentProps> = ({ idx }) => {
     switch (idx) {
-        case 1:
+        case 0:
             return (
                 <LinkComponent />
             );
-        case 2:
+        case 1:
             return (
                 <CreateComponent />
             );
-        case 3:
+        case 2:
             return (
                 <ShareComponent />
             );
-        case 4:
+        case 3:
             return (
                 <ChatComponent />
             );
